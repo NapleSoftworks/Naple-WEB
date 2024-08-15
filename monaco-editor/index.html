@@ -7774,6 +7774,15 @@
         monaco.editor.setTheme(themeName);
       };
 
+      window.addEventListener('message', function(event) {
+        if (event.data.type === 'getText') {
+          const text = getText();
+          event.source.postMessage({ type: 'getTextResponse', content: text }, event.origin);
+                } else if (event.data.type === 'setText') {
+                    setText(event.data.content);
+                }
+            }, false);
+
       var setImage = function (x) {
         document.getElementsByClassName(
           "lines-content monaco-editor-background"

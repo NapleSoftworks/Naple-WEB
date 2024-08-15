@@ -7777,7 +7777,7 @@
       window.addEventListener('message', function(event) {
         if (event.data.type === 'getText') {
           const text = getText();
-          event.source.postMessage({ type: 'getTextResponse', content: text }, event.origin);
+          event.source.postMessage({ type: 'getTextResponse', content: text }, '*');
                 } else if (event.data.type === 'setText') {
                     setText(event.data.content);
                 }

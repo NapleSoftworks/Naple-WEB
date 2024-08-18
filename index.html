@@ -158,6 +158,27 @@
             transition: transform 0.1s ease, background-color 0.3s ease;
             z-index: 1000; /* Ensure it is above other elements */
         }
+
+	::-webkit-scrollbar {
+  	    width: 8px;
+	}
+
+	/* Track */
+	::-webkit-scrollbar-track {
+	    background: var(--bg-color);
+	}
+ 
+	/* Handle */
+	::-webkit-scrollbar-thumb {
+	    background: var(--primary-color);
+	    border-radius: 15px;
+	    transition: background-color 0.3s ease;
+	}
+	
+	/* Handle on hover */
+	::-webkit-scrollbar-thumb:hover {
+	    background: var(--secondary-color);
+	}
     </style>
 </head>
 <body>
